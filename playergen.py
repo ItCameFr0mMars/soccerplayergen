@@ -27,6 +27,7 @@ def playergen(position, type, id='0')
   #types: 1 = normal, 2 = icon, 3 = scream, 4 = totw1, 5 = totw2
   if type = '1':
     if position = 'st':
-      statgen('st', '1')                     
+      stats = statgen('st', '1')
+      print statgen                 
                        
       
