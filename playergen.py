@@ -18,7 +18,16 @@ def statgen(position, kind, id='0'):
         physical = str(random.randint(75, 94))
         stats = ['Pace: '+pace+'', 'Shooting: '+shot+'', 'Passing: '+passing+'', 'Dribbling: '+dribbling+'', 'Defence: '+defence+'', 'Physical: '+physical+'']
   else:
-    print('u messed up')
+    if id == '1':
+        pace = '69'
+        shot = '420'   
+        passing = str(random.randint(74, 88))
+        dribbling = str(random.randint(76, 89))
+        defence = str(random.randint(30, 60))
+        physical = str(random.randint(75, 94))
+        stats = ['Pace: '+pace+'', 'Shooting: '+shot+'', 'Passing: '+passing+'', 'Dribbling: '+dribbling+'', 'Defence: '+defence+'', 'Physical: '+physical+'']
+      
+    else: print('u messed up')
 
   return stats
 
@@ -32,7 +41,12 @@ def playergen(position, kind, id='0'):
     if position == 'st':
       stats = statgen('st', '1', '0')
       stats.append(random.choice(firstnamelist)+' '+random.choice(lastnamelist))
-      print(stats)                 
+      print(stats)
+  elif kind == '6':
+    if position == 'st':
+      if id == '1':
+        stats = statgen(position, kind, id)
+        
                        
       
-playergen('st', '1')
+playergen('st', '6', '1')
